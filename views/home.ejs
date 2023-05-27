@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<%-include('partials/header.ejs')-%> <!--go into the subfolder with thhis method -->
+
+<html>
+
+
+<body>
+    <h1> Home</h1>
+    <p style="font-size: 200%"> 
+    <%= home %>
+    </p>
+    
+   <% ourwords.forEach(function(word) { %>  <!-- only log the title-->
+    <h1>  <%=word.title; %></h1> 
+    <p>  <%=word.body.substring(0,100) + "..."; %></p> 
+    <% }) %>
+
+</body>
+</html>
+
+<%-include('partials/footer.ejs')-%>
